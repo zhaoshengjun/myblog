@@ -1,4 +1,58 @@
 const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
+
+const BLOG_POST_SLUG_REGEX = /^\/.+\/([\d]{4})-([\d]{2})-([\d]{2})-(.+)\/$/;
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const permalink = node.frontmatter.path;
+    const relativePath = createFilePath({
+      node,
+      getNode,
+      basePath: "pages"
+    });
+
+    let slug = permalink;
+
+    if (!slug && relativePath.includes("journal")) {
+      // Generate final path + graphql fields for blog posts
+      const match = BLOG_POST_SLUG_REGEX.exec(relativePath);
+      if (match) {
+        const year = match[1];
+        const month = match[2];
+        const day = match[3];
+        const filename = match[4];
+
+        slug = `/journals/${filename}/`;
+
+        const date = new Date(
+          Number.parseInt(year),
+          Number.parseInt(month) - 1,
+          Number.parseInt(day)
+        );
+
+        // Blog posts are sorted by date and display the date in their header.
+        createNodeField({
+          node,
+          name: "date",
+          value: date.toJSON()
+        });
+      }
+    }
+
+    if (!slug) {
+      slug = relativePath;
+    }
+
+    // Used to generate URL to view this content.
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
+    });
+  }
+};
 
 exports.createPages = ({ graphql, actions }) => {
   //   console.log("createPages::", actions);
@@ -13,8 +67,8 @@ exports.createPages = ({ graphql, actions }) => {
           ) {
             edges {
               node {
-                frontmatter {
-                  path
+                fields {
+                  slug
                 }
               }
             }
@@ -24,7 +78,7 @@ exports.createPages = ({ graphql, actions }) => {
         if (result.errors) {
           reject(result.errors);
         }
-        let posts = result.data.allMarkdownRemark.edges;
+        const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach(({ node }, index) => {
           // const filePath = node.frontmatter.fileAbsoultePath;
@@ -32,12 +86,12 @@ exports.createPages = ({ graphql, actions }) => {
           //   .split("/")
           //   .pop()
           //   .replace(".md", "");
-          const path = node.frontmatter.path;
+          const { slug } = node.fields;
           createPage({
-            path,
+            path: slug,
             component: blogPostTemplate,
             context: {
-              pathSlug: path,
+              slug,
               prev: index === 0 ? null : posts[index - 1].node,
               next: index === posts.length - 1 ? null : posts[index + 1].node
             }

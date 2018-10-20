@@ -1,6 +1,5 @@
 ---
 title: Fix Broccoli Error in Angular 2
-path: "2016-05-08-broccoli-error"
 tags:
   - Angular 2
   - Broccoli

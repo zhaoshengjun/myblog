@@ -1,6 +1,5 @@
 ---
 title: "Start to Blog"
-path: "2016-05-04-start-blog2"
 tags:
   - TypeScript
   - Webpack

@@ -1,6 +1,5 @@
 ---
 title: "ng2 error - No provider for Http"
-path: "2016-05-08-http-error"
 tags:
   - Angular 2
   - HTTP
