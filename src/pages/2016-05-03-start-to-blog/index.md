@@ -1,15 +1,13 @@
 ---
-title: "ng2 error - No provider for Http"
+title: "test"
+path: "test"
 tags:
-- Angular 2
-- HTTP
+  - Angular 2
+  - HTTP
 categories:
-- Dev
+  - Dev
 date: 2016-05-08
 ---
-
-
-
 
 This error is caused by, as you can guess, no Http provider in your ts/js file.
 
