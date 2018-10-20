@@ -25,7 +25,19 @@ const Layout = ({ data }) => {
       <Header />
       {edges.map(edge => {
         const { frontmatter } = edge.node;
-        return <div key={frontmatter.path}>{frontmatter.title}</div>;
+        return (
+          <div
+            key={frontmatter.path}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              fontFamily: "Google Sans"
+            }}
+          >
+            {frontmatter.title}
+          </div>
+        );
       })}
     </div>
   );
