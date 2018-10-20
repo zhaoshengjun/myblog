@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Header } from "../components/Header";
 
 export const query = graphql`
@@ -35,7 +35,7 @@ const Layout = ({ data }) => {
               fontFamily: "Google Sans"
             }}
           >
-            {frontmatter.title}
+            <Link to={frontmatter.path}>{frontmatter.title}</Link>
           </div>
         );
       })}
