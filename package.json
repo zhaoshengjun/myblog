@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
+    "debug":"node --inspect-brk=9229 node_modules/gatsby-cli/lib/index.js develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
