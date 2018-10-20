@@ -4,7 +4,7 @@ import { Header } from "../components/Header";
 
 export const query = graphql`
   query HomepageQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
