@@ -9,7 +9,26 @@ module.exports = {
       "Sam Zhao is a developer in Brisbane QLD, building useful things (hopefully). Working somewhere on the boundary between design and code."
   },
   plugins: [
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 740
+            }
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-"
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

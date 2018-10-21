@@ -3,7 +3,7 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "debug": "node --inspect-brk=9229 node_modules/gatsby-cli/lib/index.js develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
@@ -11,8 +11,12 @@
   "dependencies": {
     "@rebass/grid": "6.0.0-4",
     "gatsby": "^2.0.0",
+    "gatsby-plugin-sharp": "2.0.7",
+    "gatsby-remark-images": "2.0.4",
+    "gatsby-remark-prismjs": "3.0.2",
     "gatsby-source-filesystem": "^2.0.5",
     "gatsby-transformer-remark": "^2.1.8",
+    "prismjs": "1.15.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "5.2.0",
