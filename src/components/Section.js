@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Box } from "@rebass/grid";
+// import { Box } from "@rebass/grid";
 import { H2 } from "./Typography";
 
-const StyledSection = styled(Box)`
+const StyledSection = styled.div`
   border-bottom: 2px solid ${props => props.theme.colors.primary};
 `;
 

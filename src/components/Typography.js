@@ -1,26 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import { fontSize, fontWeight, space } from "styled-system";
-import { Box } from "@rebass/grid";
+// import { Box } from "@rebass/grid";
 
-const REG = /^([mpfw][trblxy]?|width|fontSize|color|bg)$/;
-const removeProps = props => {
-  const next = {};
-  for (let key in props) {
-    if (REG.test(key)) {
-      continue;
-    }
-    next[key] = props[key];
-  }
-  return next;
-};
+// const REG = /^([mpfw][trblxy]?|width|fontSize|color|bg)$/;
+// const removeProps = props => {
+//   const next = {};
+//   for (let key in props) {
+//     if (REG.test(key)) {
+//       continue;
+//     }
+//     next[key] = props[key];
+//   }
+//   return next;
+// };
 
-const BaseComponent = props => {
-  const next = removeProps(props);
-  return <Box {...next} />;
-};
+// const BaseComponent = props => {
+//   const next = removeProps(props);
+//   return <div {...next} />;
+// };
 
-const BaseType = styled(BaseComponent)`
+const BaseType = styled.div`
   margin: 0;
   padding: 0;
   line-height: 1.2em;

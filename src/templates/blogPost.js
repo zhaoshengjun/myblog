@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { Alert } from "../components/Alert";
+import { Article } from "../components/Article";
 
 export const query = graphql`
   query BlogPostByPath($slug: String!) {
@@ -26,29 +27,17 @@ export const query = graphql`
   }
 `;
 
-const Template = ({ data, pageContext }) => {
+const Template = props => {
   // console.log("template::", pageContext);
-  const { prev, next } = pageContext;
-  const {
-    html,
-    frontmatter: { title }
-  } = data.markdownRemark;
+  // const { prev, next } = pageContext;
+  // const {
+  //   html,
+  //   frontmatter: { title }
+  // } = data.markdownRemark;
 
-  let isOldPost = true;
+  // let isOldPost = true;
 
-  return (
-    <div>
-      <h1>{title}</h1>
-      {isOldPost ? (
-        <Alert type="warning">
-          This post is over a year old. Some of the content may be out of date.
-        </Alert>
-      ) : null}
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-      {prev && <Link to={prev.fields.slug}>Previous</Link>}
-      {next && <Link to={next.fields.slug}>Next</Link>}
-    </div>
-  );
+  return <Article props={props} />;
 };
 
 export default Template;
