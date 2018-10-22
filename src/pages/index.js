@@ -3,19 +3,16 @@ import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 // import { Box } from "@rebass/grid";
 // import styled from "styled-components";
-
 // import { Header } from "../components/Header";
 import { Layout } from "../components/Layout";
 import { ArticleCard } from "../components/ArticleCard";
 // import { Text, P } from "../components/Typography";
 // import Section, { SectionTitle } from "../components/Section";
 require("../static/styles.css");
-
 // const PostDate = styled.p`
 //   font-size: 0.8em;
 //   display: block;
 // `;
-
 export const query = graphql`
   query IndexQuery {
     site {
@@ -42,7 +39,6 @@ export const query = graphql`
     }
   }
 `;
-
 const Index = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const meta = data.site.siteMetadata;
@@ -57,22 +53,22 @@ const Index = ({ data }) => {
               content={meta.defaultDescription}
             />
           </Helmet>
-          <section>
-            <p>
-              <span role="img" aria-label="wave">
-                👋
-              </span>
-              <br />
-              I’m Sam, a developer based in Brisbane QLD.
-            </p>
-            <p>
-              I have a particular interest in web/mobile development. Here are
-              the tips and tricks I share with you and hope you find it useful.
-            </p>
+          <section className="Articles-list clearfix">
+            <div className="Page-alignment">
+              <p>
+                <br />
+                Hi! I’m <b>Sam</b>, a developer based in Brisbane QLD.
+              </p>
+              <p>
+                I have a particular interest in web/mobile development. Here are
+                the tips and tricks I share with you and hope you find it
+                useful.
+              </p>
+            </div>
           </section>
           <section className="Articles-list clearfix">
-            <h1>Recent articles</h1>
             <div className="Page-alignment">
+              <h1 className="Article-title Section-recent">Recent articles</h1>
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }) => (
@@ -85,6 +81,5 @@ const Index = ({ data }) => {
     </Layout>
   );
 };
-
 // somehow this has to be a default export
 export default Index;

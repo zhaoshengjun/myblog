@@ -81,11 +81,6 @@ exports.createPages = ({ graphql, actions }) => {
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach(({ node }, index) => {
-          // const filePath = node.frontmatter.fileAbsoultePath;
-          // const path = filePath
-          //   .split("/")
-          //   .pop()
-          //   .replace(".md", "");
           const { slug } = node.fields;
           createPage({
             path: slug,
