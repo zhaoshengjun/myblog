@@ -55,11 +55,10 @@ const Index = ({ data }) => {
           </Helmet>
           <section className="Articles-list clearfix">
             <div className="Page-alignment">
-              <p>
-                <br />
+              <p className="Category--changelog">
                 Hi! I’m <b>Sam</b>, a developer based in Brisbane QLD.
               </p>
-              <p>
+              <p className="Category--changelog">
                 I have a particular interest in web/mobile development. Here are
                 the tips and tricks I share with you and hope you find it
                 useful.

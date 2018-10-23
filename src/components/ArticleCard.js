@@ -1,6 +1,25 @@
 import React from "react";
 import { Link } from "gatsby";
 
+const formatDate = dateString => {
+  let month = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
+  let date = new Date(dateString);
+  return `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
+};
+
 export const ArticleCard = props => {
   console.log("CARD::", props);
   const {
@@ -10,6 +29,7 @@ export const ArticleCard = props => {
       frontmatter: { date, title, tags }
     }
   } = props;
+  const formattedDate = formatDate(date);
   return (
     <article className="ArticleInList fade-in ArticleInList--cardWhenBig">
       <div className="ArticleInList-category">
@@ -24,14 +44,7 @@ export const ArticleCard = props => {
       </h2>
       <div className="Authors ArticleInList-author">
         <div className="Authors-group">
-          <div className="Author-details">
-            <cite>
-              <a className="Author-name" href="/blog/authors/jeroen-ransijn">
-                Jeroen Ransijn
-              </a>
-            </cite>
-          </div>
-          <time className="ArticleInListInList-date">on Oct 17th 2018</time>
+          <time className="ArticleInListInList-date">on {formattedDate}</time>
         </div>
       </div>
       <p className="ArticleInList-teaser">{excerpt}</p>
