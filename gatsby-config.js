@@ -18,7 +18,7 @@ module.exports = {
             options: {
               maxWidth: 672,
               showCaptions: true,
-              backgroundColor: "red"
+              backgroundColor: "#d2eef3"
             }
           },
           {
