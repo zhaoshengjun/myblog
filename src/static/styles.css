@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Sans";
+    src: url(./fonts/GoogleSans-regular.woff) format("woff2"), url(./fonts/GoogleSans-regular.woff) format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Sans";
+    src: url(./fonts/GoogleSans-medium.woff2) format("woff2"), url(./fonts/GoogleSans-medium.woff) format("woff");
+    font-weight: 500;
+}
+
 audio,
 canvas,
 img,
@@ -145,7 +157,7 @@ pre {
 @media (max-width: 440px),
 (min-width: 441px) and (max-width: 620px) {
     .Navigation-logoSubTitle {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -155,7 +167,7 @@ pre {
 @media (min-width: 621px) and (max-width: 980px),
 (min-width: 981px) {
     .Navigation-logoSubTitle {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 30px;
@@ -165,7 +177,7 @@ pre {
 
 @media (max-width: 440px) {
     .Navigation-logoSubTitle {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -195,7 +207,7 @@ pre {
 
 @media (max-width: 440px) {
     .Navigation-right .Link--primary {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -205,7 +217,6 @@ pre {
 .Navigation-logo {
     display: inline-block;
     position: relative;
-    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYwIiBoZWlnaHQ9Ijc4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZGVmcz48cGF0aCBpZD0iYSIgZD0iTTc4LjgwMiAzMi45NEgwVi40OTVoNzguODAyeiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMzMuOTMyIDM3LjU4NmwtNi41NDUtMS40MmMtMy4yNzUtLjcxLTUuMDc4LTIuNzMtNS4wNzgtNS42OSAwLTMuNzYyIDMuMzQtNi42IDcuNzctNi42IDYuMTMgMCA3Ljk0IDQuNTEgOC4zNSA1Ljg5NC4xMy40Ni40NS44NS44OCAxLjA2NS40Mi4yMTUuODkuMjQ3IDEuMzQuMDlsMy40NS0xLjIxN2ExLjcyNSAxLjcyNSAwIDAgMCAxLjA4LTIuMTA0Yy0uODktMy4xMy00LjE2LTEwLjQxLTE1LjI1LTEwLjQxLTguMjEgMC0xNS4xNCA2LjI4LTE1LjE0IDEzLjcxNSAwIDYuMzkgNC4xOTMgMTEuMTEgMTEuMjIgMTIuNjRsNi4yNCAxLjM2YzMuNzU2Ljc5IDYgMy4wOCA2IDYuMTIgMCAzLjg4LTMuMTkgNi4yOS04LjMzIDYuMjktNi4wNCAwLTguOTUtMy45Ni05LjY2LTcuNjdhMS43MTggMS43MTggMCAwIDAtMi4yMS0xLjMybC0zLjc5IDEuMjFhMS42OTIgMS42OTIgMCAwIDAtMS4xNyAxLjkzYzEuMTggNi4xNSA2LjIzMyAxMi43MSAxNi45IDEyLjcxIDkuMDE0IDAgMTUuODEyLTUuODcgMTUuODEyLTEzLjY1IDAtNi41Ny00LjMzNi0xMS4yOS0xMS45LTEyLjk2bTM4Ljc1MiA2Yy4wMi4xMy0uMDQuMjMtLjA4LjI3YS4zNS4zNSAwIDAgMS0uMjc1LjEzaC0xMy45YS4zNjQuMzY0IDAgMCAxLS4yODctLjE0LjMxNC4zMTQgMCAwIDEtLjA3LS4yN2MuNjM1LTIuODk4IDMuMTItNS44MiA3LjI0LTUuODIgNC4wNDcgMCA2LjggMi4xNyA3LjM2NSA1LjgxM3ptLTcuNDI2LTEyLjMyYy03LjMyIDAtMTQuODkgNi4xMi0xNC44OSAxNi4zNyAwIDQuOTQgMS42MiA5LjE2IDQuNjkgMTIuMTkgMi44NDQgMi44MSA2LjczIDQuMzYgMTAuOTQgNC4zNiA2LjI3IDAgMTEuMzUtMy4yNzYgMTMuNTktOC43Ni4xOC0uNDUuMTctLjk1LS4wMjQtMS4zOWExLjcwNCAxLjcwNCAwIDAgMC0xLjAwNS0uOTE2bC0zLjA2LTEuMDZhMS43MiAxLjcyIDAgMCAwLTIuMTM3Ljk0M2MtMS4zMiAzLjExLTMuOCA0LjY4LTcuMzcgNC42OC00LjMyIDAtNy42MS0yLjkxLTguMTgtNy4yNDNhLjMyNC4zMjQgMCAwIDEgLjA4NS0uMjdjLjA0LS4wNS4xMy0uMTMuMjctLjEzaDIwLjI4NGMuOTEgMCAxLjY3LS43MSAxLjcyLTEuNjE2LjAyLS4yOS4wMy0uNjEuMDMtLjkyNiAwLTEwLjAyLTUuNzMtMTYuMjQzLTE0Ljk1LTE2LjI0M3ptMzQuNTQgMjQuMzJjLTQuODcgMC03LjktMy4zOC03LjktOC44MiAwLTUuMzYgMy4xLTguODI0IDcuOS04LjgyNCA0LjY1IDAgNy43NzQgMy41NCA3Ljc3NCA4LjgyIDAgNS4yNzQtMy4xMjYgOC44Mi03Ljc3NSA4Ljgyem0xMi45OC0yMy40aC0zLjY3Yy0uOTUgMC0xLjcyNS43NzMtMS43MjUgMS43N2EuMzYuMzYgMCAwIDEtLjIyLjMzYy0uMDcuMDMtLjIxLjA3LS4zMzYtLjA1LTEuODktMS43MjgtNC41NS0yLjYwNS03LjktMi42MDUtOC4zMDMgMC0xNC4zMyA2LjM3LTE0LjMzIDE1LjE0IDAgOC43MzIgNi4wMjcgMTUuMDcgMTQuMzMgMTUuMDcgMy4wNyAwIDUuODUtMS4wMDggNy44My0yLjgzOC4xMy0uMTIuMjctLjA5LjM0LS4wNi4wNS4wMi4yMi4xMS4yMi4zM3YxLjI2YzAgNi4xLTIuNjcgOC45NDUtOC4zOSA4Ljk0NS0zLjYzIDAtNi40OC0yLjI1LTcuMjUtNS43MjgtLjEtLjQ1LS4zNy0uODMtLjc2LTEuMDczcy0uODYtLjMyLTEuMzEtLjIybC0zLjYwNC44M2ExLjczNiAxLjczNiAwIDAgMC0xLjI5NCAyLjA2YzEuMjkgNi4zMiA3LjAwNiAxMC41NyAxNC4yMSAxMC41NyA1LjM3IDAgOS40Ni0xLjYzNSAxMi4xNi00Ljg2IDIuMjMtMi42NjYgMy40MS02LjM2NyAzLjQxLTEwLjcwM1YzMy45MmMwLS45NS0uNzctMS43Mi0xLjcyLTEuNzJ6bTQzLjYzLS44NjRjLTQuMDYgMC03LjM2MyAxLjUzMi05LjU1NCA0LjQ0YS4zOC4zOCAwIDAgMS0uMzM1LjE2NC4yNzUuMjc1IDAgMCAxLS4yNC0uMTM1Yy0xLjgzNy0yLjg0LTUuMDA4LTQuNDctOC43LTQuNDctMi45MzcgMC01Ljc2IDEuMDMyLTcuNzQ4IDIuODM1YS4zMy4zMyAwIDAgMS0uMzguMDcuMzIzLjMyMyAwIDAgMS0uMi0uMzEyYzAtLjk1LS43NzQtMS43Mi0xLjcyNC0xLjcyaC0zLjQ4NmMtLjk1IDAtMS43Mi43Ny0xLjcyIDEuNzJ2MjcuNjNjMCAuOTUuNzc0IDEuNzIyIDEuNzI0IDEuNzIyaDMuNjdjLjk1IDAgMS43Mi0uNzc2IDEuNzItMS43MjZWNDQuNjhjMC00LjA5MyAyLjUtNi44NDQgNi4yMy02Ljg0NCA0Ljg4IDAgNS42MSAzLjgyNyA1LjYxIDYuMTA3djE3LjYxYzAgLjk1Ljc3IDEuNzIgMS43MiAxLjcyaDMuNzMzYy45NSAwIDEuNzItLjc3NCAxLjcyLTEuNzI0VjQ0LjYyYzAtMy45OTYgMi41NC02Ljc4NiA2LjE3LTYuNzg2IDQuODgzIDAgNS42MSAzLjgzIDUuNjEgNi4xMXYxNy42MWMwIC45NS43NyAxLjcyIDEuNzIgMS43MmgzLjY3Yy45NSAwIDEuNzItLjc3NCAxLjcyLTEuNzI0VjQzLjMyYzAtOC4yOC01LjQ5LTExLjk4My0xMC45My0xMS45ODNtMjQuODEgMTIuNjU2YS4zNy4zNyAwIDAgMS0uMjg3LS4xMzguMzE0LjMxNCAwIDAgMS0uMDY2LS4yNjZjLjYzNi0yLjkgMy4xMi01LjgyIDcuMjQ0LTUuODIgNC4wNDYgMCA2LjggMi4xNyA3LjM2NCA1LjgxLjAyLjEzLS4wNDMuMjMtLjA4LjI3YS4zODkuMzg5IDAgMCAxLS4yNzUuMTJoLTEzLjl6bTYuODMtMTIuNzJjLTcuMzIgMC0xNC44OSA2LjEyNC0xNC44OSAxNi4zNyAwIDQuOTQ2IDEuNjIgOS4xNjMgNC42ODYgMTIuMTk2IDIuODQgMi44MSA2LjcyIDQuMzUgMTAuOTQgNC4zNSA2LjI2IDAgMTEuMzQtMy4yOCAxMy41OS04Ljc3LjE4LS40NS4xNy0uOTUtLjAzLTEuMzktLjItLjQ0LS41Ni0uNzYtMS4wMS0uOTJsLTMuMDYtMS4wNThjLS44NS0uMjkzLTEuNzkuMTItMi4xMzguOTQyLTEuMzIgMy4xMDItMy44IDQuNjgtNy4zNyA0LjY4LTQuMzIgMC03LjYxLTIuOTE2LTguMTgtNy4yNWEuMzQuMzQgMCAwIDEgLjA4LS4yNzZjLjA0LS4wNS4xMy0uMTI1LjI3LS4xMjVoMjAuMjljLjkxIDAgMS42NjctLjcxIDEuNzItMS42MTcuMDE3LS4yOS4wMy0uNjEuMDMtLjkzIDAtMTAuMDItNS43My0xNi4yNS0xNC45NS0xNi4yNXptMzYuNzcuMDYzYy0zLjEwNSAwLTUuODI3IDEuMDU4LTcuODcgMy4wNmEuMzMuMzMgMCAwIDEtLjM2Ni4wNy4zNS4zNSAwIDAgMS0uMjEtLjMyNHYtLjIyYzAtLjk1LS43NzQtMS43Mi0xLjcyNC0xLjcyaC0zLjZjLS45NSAwLTEuNzI0Ljc3LTEuNzI0IDEuNzJ2MjcuNjI1YzAgLjk1Ljc3IDEuNzIzIDEuNzIgMS43MjNoMy43M2MuOTUgMCAxLjcyNS0uNzc1IDEuNzI1LTEuNzI1VjQ1LjQxOGMwLTMuNjA4IDEuNjM1LTcuNDY0IDYuMjMtNy40NjQgNC4xMyAwIDYuMjI2IDIuMjgzIDYuMjI2IDYuNzg1djE2LjhjMCAuOTUuNzcgMS43MiAxLjcyIDEuNzJoMy43M2MuOTUgMCAxLjcyMi0uNzggMS43MjItMS43M1Y0My43NWMwLTcuNjYtNC4zMzgtMTIuNDItMTEuMzEtMTIuNDJtMjguNjkgNy40ODhoNC4zNWMuOTUgMCAxLjcyLS43NzUgMS43Mi0xLjcyNFYzMy45MmMwLS45NS0uNzctMS43Mi0xLjcyLTEuNzJoLTQuMzVhLjM1LjM1IDAgMCAxLS4zNS0uMzV2LTcuMzE0YzAtLjk1LS43NzYtMS43MjItMS43MjUtMS43MjJoLTMuMjRjLS45NSAwLTEuNzIuNzcyLTEuNzIgMS43MjJ2My43OGMwIDEuNzctLjY3OCAzLjg4My0zLjg4OCAzLjg4M0gzNDJjLS45NSAwLTEuNzIuNzctMS43MiAxLjcydjMuMTdjMCAuOTUuNzczIDEuNzIgMS43MiAxLjcyaDMuNjFjLjE5NSAwIC4zNS4xNS4zNS4zNXYxNS4yN2MwIDUuNjQgMy40MzUgOS4xNCA4Ljk2IDkuMTQgMS41NCAwIDIuNzM4LS4yMiAzLjMxNS0uMzUuNzgtLjE4IDEuMzI4LS44NyAxLjMyOC0xLjY4VjU4LjZhMS43MjUgMS43MjUgMCAwIDAtMS45MDgtMS43MTNjLS4zOS4wNC0uNzY4LjA2My0xLjA2NC4wNjMtMi41MSAwLTMuNDUtLjkyLTMuNDUtMy4zOXYtMTQuNGMwLS4xOTIuMTYtLjM0OC4zNS0uMzQ4IiBmaWxsPSIjNDNBRjc5Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA0NSkiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik01MS45MjYgOC40OTdINGMtMi4yMSAwLTQtMS43OS00LTRzMS43OS00IDQtNGg0Ny45MjZjMi4yMSAwIDQgMS43OSA0IDRzLTEuNzkgNC00IDQiIGZpbGw9IiM5M0M4QTIiIG1hc2s9InVybCgjYikiLz48cGF0aCBkPSJNNDEuNjUgMzNjLTMuOTA0IDAtNy43Ni0uNTgtMTEuNDYtMS43MjdhNCA0IDAgMCAxLTIuNjM3LTUuMDA0Yy42NTQtMi4xMiAyLjktMy4zIDUuMDA1LTIuNjQgMi45MzIuOTEgNS45OSAxLjM3IDkuMDkyIDEuMzcgMTMuNTczIDAgMjUuMzU4LTguNzEgMjkuMzI3LTIxLjY4YTMuOTk1IDMuOTk1IDAgMCAxIDQuOTk1LTIuNjVjMi4xMTIuNjQgMy4zIDIuODggMi42NTQgNC45OUM3My42MjIgMjIuMDEgNTguNzYyIDMzIDQxLjY1IDMzIiBmaWxsPSIjNDNBRjc5IiBtYXNrPSJ1cmwoI2IpIi8+PC9nPjxwYXRoIGQ9Ik03OS4zIDMzLjE3NUgzMS4zNzZjLTIuMjEgMC00LTEuNzktNC00czEuNzktNCA0LTRINzkuM2MyLjIxIDAgNCAxLjc5IDQgNHMtMS43OSA0LTQgNCIgZmlsbD0iIzkzQzhBMiIvPjxwYXRoIGQ9Ik04LjUgMzMuMTc2YTQgNCAwIDAgMS0zLjgyNS01LjE3MkM5LjY4IDExLjY1NCAyNC41NC42NzIgNDEuNjUuNjcyYzMuOTA3IDAgNy43NjMuNTggMTEuNDYgMS43MjhhNCA0IDAgMCAxIDIuNjM3IDUuMDA1IDMuOTk1IDMuOTk1IDAgMCAxLTUuMDA1IDIuNjM2Yy0yLjkzLS45LTUuOTktMS4zNi05LjA5Mi0xLjM2LTEzLjU3IDAtMjUuMzU3IDguNzEtMjkuMzI2IDIxLjY4YTQuMDAzIDQuMDAzIDAgMCAxLTMuODIzIDIuODMiIGZpbGw9IiM0M0FGNzkiLz48cGF0aCBkPSJNNjkuMzkyIDEzLjkzMmE0IDQgMCAxIDEtOCAwIDQgNCAwIDAgMSA4IDBNMjEuOTA3IDY0Ljc0NmE0IDQgMCAxIDEtOCAwIDQgNCAwIDAgMSA4IDAiIGZpbGw9IiM5M0M4QTIiLz48L2c+PC9zdmc+) 50% no-repeat;
     background-size: contain;
     text-indent: -9999px;
 }
@@ -297,7 +308,7 @@ pre {
 
 @media (min-width: 441px) and (max-width: 620px) {
     .NavigationLinks-link {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -306,7 +317,7 @@ pre {
 
 @media (max-width: 440px) {
     .NavigationLinks-link {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -331,7 +342,7 @@ pre {
 
 body,
 html {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
@@ -346,7 +357,7 @@ html {
 (min-width: 441px) and (max-width: 620px) {
     body,
     html {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -496,7 +507,7 @@ h6 {
 
 .Author-avatar--initials,
 .Author-avatar--standalone.Author-avatar--initials {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
@@ -526,7 +537,7 @@ a.Author-name:hover {
 
 .TwitterButton {
     color: #1da1f2;
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 20px;
@@ -553,7 +564,7 @@ a.Author-name:hover {
 @media (max-width: 440px) {
     .Category {
         padding: 1px 8px 0;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 10px;
         font-weight: 600;
         line-height: 18px;
@@ -565,7 +576,7 @@ a.Author-name:hover {
 @media (min-width: 441px) and (max-width: 620px) {
     .Category {
         padding: 1px 8px 0;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 10px;
         font-weight: 600;
         line-height: 18px;
@@ -576,7 +587,7 @@ a.Author-name:hover {
 
 @media (min-width: 621px) and (max-width: 980px) {
     .Category {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 20px;
@@ -587,7 +598,7 @@ a.Author-name:hover {
 
 @media (min-width: 981px) {
     .Category {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 20px;
@@ -629,7 +640,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .Article {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -668,7 +679,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .Article-title {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         font-weight: 400;
         line-height: 31px;
@@ -678,7 +689,7 @@ a.Author-name:hover {
 
 @media (min-width: 441px) and (max-width: 620px) {
     .Article-title {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 27px;
         font-weight: 400;
         line-height: 37px;
@@ -690,7 +701,7 @@ a.Author-name:hover {
 (min-width: 741px) and (max-width: 860px) {
     .Article-title {
         margin: 24px 0 16px;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 36px;
         font-weight: 400;
         line-height: 46px;
@@ -702,7 +713,7 @@ a.Author-name:hover {
 (min-width: 981px) {
     .Article-title {
         margin: 24px -65px 16px;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 40px;
         font-weight: 400;
         line-height: 48px;
@@ -718,7 +729,7 @@ a.Author-name:hover {
 
 @media (min-width: 441px) and (max-width: 620px) {
     .Article-header {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 27px;
         font-weight: 400;
         line-height: 37px;
@@ -752,7 +763,7 @@ a.Author-name:hover {
 @media (max-width: 440px) {
     .Article-author {
         margin: 8px 0 24px;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -845,7 +856,7 @@ a.Author-name:hover {
 @media (max-width: 440px) {
     .ArticleInList-title {
         margin: 8px 0;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         font-weight: 400;
         line-height: 31px;
@@ -855,7 +866,7 @@ a.Author-name:hover {
 @media (min-width: 441px) and (max-width: 620px) {
     .ArticleInList-title {
         margin: 16px 0;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 27px;
         font-weight: 400;
         line-height: 37px;
@@ -865,7 +876,7 @@ a.Author-name:hover {
 @media (min-width: 621px) and (max-width: 980px) {
     .ArticleInList-title {
         margin: 16px 0;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 36px;
         font-weight: 400;
         line-height: 46px;
@@ -876,7 +887,7 @@ a.Author-name:hover {
 @media (min-width: 981px) {
     .ArticleInList-title {
         margin: 16px 0;
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 36px;
         font-weight: 400;
         line-height: 46px;
@@ -894,7 +905,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .ArticleInList-author {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -922,7 +933,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .ArticleInList-teaser {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -1233,7 +1244,7 @@ a.Author-name:hover {
 }
 
 .Footer-specialist {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -1288,7 +1299,7 @@ a.Author-name:hover {
 
 .Footer-body-links,
 .Footer-body-title {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
 }
 
@@ -1323,7 +1334,7 @@ a.Author-name:hover {
 }
 
 .Footer-copy {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -1339,7 +1350,7 @@ a.Author-name:hover {
 }
 
 .Footer-social {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -1358,7 +1369,7 @@ a.Author-name:hover {
 }
 
 .Footer-privacy-terms {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -1371,7 +1382,7 @@ a.Author-name:hover {
 }
 
 .Tag {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 10px;
     font-weight: 600;
     line-height: 18px;
@@ -1441,7 +1452,7 @@ a.Author-name:hover {
 }
 
 .display3 {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 27px;
     font-weight: 400;
     line-height: 37px;
@@ -1464,7 +1475,7 @@ a.Author-name:hover {
 }
 
 .Content--contained {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -1483,7 +1494,7 @@ a.Author-name:hover {
 .Content h3,
 .Content h4,
 .Content h5 {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
@@ -1495,7 +1506,7 @@ a.Author-name:hover {
 @media (max-width: 440px) {
     .Content h1,
     .Content h2 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         font-weight: 400;
         line-height: 31px;
@@ -1507,7 +1518,7 @@ a.Author-name:hover {
 @media (min-width: 441px) and (max-width: 620px) {
     .Content h1,
     .Content h2 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 27px;
         font-weight: 400;
         line-height: 37px;
@@ -1520,7 +1531,7 @@ a.Author-name:hover {
 (min-width: 741px) and (max-width: 860px) {
     .Content h1,
     .Content h2 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 27px;
         line-height: 37px;
         margin-bottom: 16px;
@@ -1531,7 +1542,7 @@ a.Author-name:hover {
 (min-width: 981px) {
     .Content h1,
     .Content h2 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 27px;
         line-height: 37px;
         margin-bottom: 16px;
@@ -1540,7 +1551,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .Content h3 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         line-height: 31px;
         margin-bottom: 8px;
@@ -1550,7 +1561,7 @@ a.Author-name:hover {
 
 @media (min-width: 441px) and (max-width: 620px) {
     .Content h3 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         line-height: 31px;
         margin-bottom: 16px;
@@ -1561,7 +1572,7 @@ a.Author-name:hover {
 @media (min-width: 621px) and (max-width: 740px),
 (min-width: 741px) and (max-width: 860px) {
     .Content h3 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         line-height: 31px;
         margin-bottom: 16px;
@@ -1571,7 +1582,7 @@ a.Author-name:hover {
 @media (min-width: 861px) and (max-width: 980px),
 (min-width: 981px) {
     .Content h3 {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 22px;
         line-height: 31px;
         margin-bottom: 16px;
@@ -1794,7 +1805,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .Content img {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -1856,7 +1867,7 @@ a.Author-name:hover {
 
 .ChangelogHeader-description,
 .ChangelogHeader-title {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -1933,7 +1944,7 @@ a.Author-name:hover {
 }
 
 .ChangelogEntry-title {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -1942,7 +1953,7 @@ a.Author-name:hover {
 
 @media (max-width: 440px) {
     .ChangelogEntry-title {
-        font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -1956,7 +1967,7 @@ a.Author-name:hover {
 }
 
 .ChangelogEntry-category {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -2005,7 +2016,7 @@ a.Author-name:hover {
 }
 
 .ChangelogGroup-title {
-    font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -2037,8 +2048,16 @@ a.Author-name:hover {
     border-radius: 50%;
 }
 
+.Bio-link {
+    color: #006cd1;
+}
+
 .Bio-content {
     padding-left: 2rem;
+}
+
+.Bio-content-detail {
+    padding-bottom: 1rem;
 }
 
 .Hero {
