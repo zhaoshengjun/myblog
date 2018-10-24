@@ -1,5 +1,8 @@
 ---
 title: "How to Handle CSRF Token in SAPUI5"
+tags:
+  - SAPUI5
+  - CSRF Token
 date: 2018-05-22
 ---
 

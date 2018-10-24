@@ -1,5 +1,7 @@
 ---
 title: Diagnostics Tool in SAPUI5 Apps
+tags:
+  - SAPUI5
 date: 2018-02-05
 ---
 
@@ -7,9 +9,9 @@ date: 2018-02-05
 
 Diagnostic tool is provided by SAPUI5 to improve the productivity for developers, available both for desktop and mobile.
 
-![APUI5-diagnostics-too](../images/SAPUI5-diagnostics-tool.png)
+![SAPUI5-diagnostics-too](../images/SAPUI5-diagnostics-tool.png)
 
- With this tool, you can check:
+With this tool, you can check:
 
 - Technical information
 - Control tree
@@ -21,15 +23,15 @@ Diagnostic tool is provided by SAPUI5 to improve the productivity for developers
 
 ### Technical Information
 
-![APUI5-diagnostics-tool-tech-inf](../images/SAPUI5-diagnostics-tool-tech-info.png)
+![SAPUI5-diagnostics-tool-tech-inf](../images/SAPUI5-diagnostics-tool-tech-info.png)
 
-As you can see from the above screenshot, in 'Technical Information' part, you can see the overview of the technical parts of the running SAPUI5 app. Mostly the JS version, but also you can enable the 'Debug Mode'. 
+As you can see from the above screenshot, in 'Technical Information' part, you can see the overview of the technical parts of the running SAPUI5 app. Mostly the JS version, but also you can enable the 'Debug Mode'.
 
 With this, you can quickly check if the file version is wrong.
 
 ### Control Tree
 
-This might be the highlight of this tool. 
+This might be the highlight of this tool.
 
 In this part, you can see how the components are integrated with each other. And you can find the control by placing this page and the application side by side and clicking the control while pressing `Ctrl+Alt+Shift`.
 
