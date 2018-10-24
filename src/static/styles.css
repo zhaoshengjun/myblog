@@ -1107,7 +1107,6 @@ a.Author-name:hover {
     -ms-flex-pack: center;
     justify-content: center;
     padding-top: 64px;
-    padding-bottom: 88px;
     border-top-color: #dae4ed;
     border-top-width: 1px;
     border-top-style: solid;
@@ -2068,4 +2067,11 @@ a.Author-name:hover {
 
 .Bio-content {
     padding-left: 2rem;
+}
+
+.Hero {
+    font-size: 3.95285rem;
+    line-height: 4.375rem;
+    margin-bottom: 2.625rem;
+    margin-top: 0px;
 }

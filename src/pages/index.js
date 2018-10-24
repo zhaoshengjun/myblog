@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 import { Layout } from "../components/Layout";
 import { ArticleCard } from "../components/ArticleCard";
-import Avatar from "../static/Avatar.jpg";
+import { Bio } from "../components/Bio";
 
 require("../static/styles.css");
 
@@ -47,21 +47,7 @@ const Index = ({ data }) => {
               content={meta.defaultDescription}
             />
           </Helmet>
-          <section className="Articles-list clearfix">
-            <div className="Page-alignment Bio-container">
-              <img src={Avatar} alt="avatar" className="Bio-avatar" />
-              <div className="Bio-content">
-                <p className="Category--changelog">
-                  Hi! I’m <b>Sam</b>, a developer based in Brisbane QLD.
-                </p>
-                <p className="Category--changelog">
-                  I have a particular interest in web/mobile development. Here
-                  are the tips and tricks I share with you and hope you find it
-                  useful.
-                </p>
-              </div>
-            </div>
-          </section>
+          <Bio />
           <section className="Articles-list clearfix">
             <div className="Page-alignment">
               <h1 className="Article-title Section-recent">Recent articles</h1>
