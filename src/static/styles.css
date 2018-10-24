@@ -2055,3 +2055,17 @@ a.Author-name:hover {
     font-weight: 500;
     color: #3d556b;
 }
+
+.Bio-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Bio-avatar {
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.Bio-content {
+    padding-left: 2rem;
+}

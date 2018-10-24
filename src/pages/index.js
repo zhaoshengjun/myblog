@@ -1,18 +1,12 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
-// import { Box } from "@rebass/grid";
-// import styled from "styled-components";
-// import { Header } from "../components/Header";
 import { Layout } from "../components/Layout";
 import { ArticleCard } from "../components/ArticleCard";
-// import { Text, P } from "../components/Typography";
-// import Section, { SectionTitle } from "../components/Section";
+import Avatar from "../static/Avatar.jpg";
+
 require("../static/styles.css");
-// const PostDate = styled.p`
-//   font-size: 0.8em;
-//   display: block;
-// `;
+
 export const query = graphql`
   query IndexQuery {
     site {
@@ -54,15 +48,18 @@ const Index = ({ data }) => {
             />
           </Helmet>
           <section className="Articles-list clearfix">
-            <div className="Page-alignment">
-              <p className="Category--changelog">
-                Hi! I’m <b>Sam</b>, a developer based in Brisbane QLD.
-              </p>
-              <p className="Category--changelog">
-                I have a particular interest in web/mobile development. Here are
-                the tips and tricks I share with you and hope you find it
-                useful.
-              </p>
+            <div className="Page-alignment Bio-container">
+              <img src={Avatar} alt="avatar" className="Bio-avatar" />
+              <div className="Bio-content">
+                <p className="Category--changelog">
+                  Hi! I’m <b>Sam</b>, a developer based in Brisbane QLD.
+                </p>
+                <p className="Category--changelog">
+                  I have a particular interest in web/mobile development. Here
+                  are the tips and tricks I share with you and hope you find it
+                  useful.
+                </p>
+              </div>
             </div>
           </section>
           <section className="Articles-list clearfix">

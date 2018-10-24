@@ -2,6 +2,7 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 const BLOG_POST_SLUG_REGEX = /^\/.+\/([\d]{4})-([\d]{2})-([\d]{2})-(.+)\/$/;
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
@@ -55,7 +56,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  //   console.log("createPages::", actions);
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     const blogPostTemplate = path.resolve("src/templates/blogPost.js");
