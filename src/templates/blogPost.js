@@ -5,13 +5,6 @@ import { Article } from "../components/Article";
 
 export const query = graphql`
   query BlogPostByPath($slug: String!) {
-    site {
-      siteMetadata {
-        author
-        defaultTitle
-        defaultDescription
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
@@ -22,22 +15,12 @@ export const query = graphql`
       frontmatter {
         title
         date
+        tags
       }
     }
   }
 `;
 
-const Template = props => {
-  // console.log("template::", pageContext);
-  // const { prev, next } = pageContext;
-  // const {
-  //   html,
-  //   frontmatter: { title }
-  // } = data.markdownRemark;
-
-  // let isOldPost = true;
-
-  return <Article props={props} />;
-};
+const Template = props => <Article props={props} />;
 
 export default Template;

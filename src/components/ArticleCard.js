@@ -21,7 +21,6 @@ const formatDate = dateString => {
 };
 
 export const ArticleCard = props => {
-  console.log("CARD::", props);
   const {
     post: {
       excerpt,

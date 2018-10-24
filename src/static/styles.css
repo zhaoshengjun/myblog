@@ -118,19 +118,6 @@ pre {
 (min-width: 621px) and (max-width: 980px) {
     .Navigation {
         background-color: #fff;
-        margin-bottom: 80px;
-    }
-}
-
-@media (max-width: 440px) {
-    .Navigation {
-        margin-bottom: 48px;
-    }
-}
-
-@media (min-width: 441px) and (max-width: 620px) {
-    .Navigation {
-        margin-bottom: 48px;
     }
 }
 
@@ -646,26 +633,11 @@ a.Author-name:hover {
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
-        padding-bottom: 120px;
     }
 }
 
-@media (min-width: 441px) and (max-width: 620px) {
-    .Article {
-        padding-bottom: 120px;
-    }
-}
-
-@media (min-width: 621px) and (max-width: 980px) {
-    .Article {
-        padding-bottom: 200px;
-    }
-}
-
-@media (min-width: 981px) {
-    .Article {
-        padding-bottom: 200px;
-    }
+.Article {
+    padding-bottom: 80px;
 }
 
 .Article-bannerImage {
