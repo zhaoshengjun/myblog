@@ -12,7 +12,8 @@ export const Bio = () => (
         </p>
         <p className="Category--changelog Bio-content-detail">
           I have a particular interest in web/mobile development. Here are the
-          tips and tricks I share with you and hope you find it useful.
+          tips and tricks I want to share with you and hope you'll find them
+          useful.
         </p>
         <p className="Category--changelog Bio-content-detail">
           Check me on{" "}
