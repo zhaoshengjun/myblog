@@ -80,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
         const posts = result.data.allMarkdownRemark.edges;
 
-        posts.forEach(({ node }, index) => {
+        posts.map(({ node }, index) => {
           const { slug } = node.fields;
           createPage({
             path: slug,

@@ -1647,6 +1647,7 @@ a.Author-name:hover {
 .Content code,
 .Content pre {
     -webkit-font-smoothing: auto;
+    font-family: consolas, sf mono, Monaco, Lucida Console, monospace;
     border-radius: 5px;
     overflow: scroll;
 }
@@ -1661,15 +1662,9 @@ a.Author-name:hover {
 .Content h6>code {
     background-color: #f1fbfc;
     border-radius: 2px;
-    box-shadow: 0 0 0 1px #d2eef3;
-    font-size: 80%;
+    font-size: 95%;
     color: #007489;
     padding: 2px 4px;
-}
-
-.Content code,
-.Content pre {
-    font-family: Droid Sans Mono, Monaco, Lucida Console, monospace;
 }
 
 .Content pre {
@@ -2065,4 +2060,8 @@ a.Author-name:hover {
     line-height: 4.375rem;
     margin-bottom: 2.625rem;
     margin-top: 0px;
+}
+
+.language-text {
+    color: white;
 }
