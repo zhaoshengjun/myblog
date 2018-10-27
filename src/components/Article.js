@@ -4,7 +4,6 @@ import { Layout } from "./Layout";
 
 export const Article = ({ props: { data, pageContext } }) => {
   const { prev, next } = pageContext;
-  console.log("Article::pagecontext::", pageContext);
   const {
     html,
     frontmatter: { title, tags }

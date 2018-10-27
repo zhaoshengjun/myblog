@@ -17,16 +17,25 @@ export const Bio = () => (
         </p>
         <p className="Category--changelog Bio-content-detail">
           Check me on{" "}
-          <a href="" className="Link--primary Bio-link ">
+          <a
+            href="https://github.com/zhaoshengjun"
+            className="Link--primary Bio-link "
+          >
             GitHub
           </a>
           ,{" "}
-          <a href="" className="Link--primary Bio-link ">
+          <a
+            href="https://twitter.com/samzhaocn"
+            className="Link--primary Bio-link "
+          >
             {" "}
             Twitter{" "}
           </a>{" "}
           or{" "}
-          <a href="" className="Link--primary Bio-link ">
+          <a
+            href="https://www.linkedin.com//in/zhaoshengjun"
+            className="Link--primary Bio-link "
+          >
             LinkedIn{" "}
           </a>
           .
